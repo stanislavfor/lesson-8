@@ -1,46 +1,38 @@
-import React, { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import React, { useState } from 'react';
 
 const CartPage = () => {
-    const { cartItems, updateQuantity, getTotal } = useContext(CartContext);
+    const [cartItems, setCartItems] = useState([
+        { id: 1, name: 'Product 1', price: 100, quantity: 1 },
+        { id: 2, name: 'Product 2', price: 200, quantity: 2 },
+    ]);
+
+    const updateQuantity = (id, quantity) => {
+        setCartItems(cartItems.map(item =>
+            item.id === id ? { ...item, quantity } : item
+        ));
+    };
+
+    const grandTotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
     return (
-        <div className="container">
-            <h2>Your Cart</h2>
-            {cartItems.length === 0 ? (
-                <p>Cart is empty.</p>
-            ) : (
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Size</th>
-                        <th>Price</th>
-                        <th>Qty</th>
-                        <th>Total</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {cartItems.map(item => (
-                        <tr key={item.id}>
-                            <td>{item.name}</td>
-                            <td>{item.size}</td>
-                            <td>${item.price}</td>
-                            <td>
-                                <input
-                                    type="number"
-                                    min="1"
-                                    value={item.quantity}
-                                    onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
-                                />
-                            </td>
-                            <td>${item.price * item.quantity}</td>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
-            )}
-            <h3>Grand Total: ${getTotal()}</h3>
+        <div>
+            <h1>Cart</h1>
+            <div className="cart-items">
+                {cartItems.map(item => (
+                    <div key={item.id} className="cart-item">
+                        <h3>{item.name}</h3>
+                        <p>{item.price}</p>
+                        <input
+                            type="number"
+                            value={item.quantity}
+                            onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                        />
+                    </div>
+                ))}
+            </div>
+            <div className="grand-total">
+                <h2>GRAND TOTAL ${grandTotal}</h2>
+            </div>
         </div>
     );
 };

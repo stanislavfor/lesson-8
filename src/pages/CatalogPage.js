@@ -1,31 +1,35 @@
 import React, { useState } from 'react';
-import { products } from '../data/products';
-import ProductCard from '../components/ProductCard';
+import ProductCard from './ProductCard';
 
 const CatalogPage = () => {
-    const [selectedSize, setSelectedSize] = useState('');
+    const [products, setProducts] = useState([
+        { id: 1, name: 'Product 1', price: 100, size: 'S', image: '/images/product1.jpg' },
+        { id: 2, name: 'Product 2', price: 200, size: 'M', image: '/images/product2.jpg' },
+        { id: 3, name: 'Product 3', price: 300, size: 'L', image: '/images/product3.jpg' },
+        { id: 4, name: 'Product 4', price: 150, size: 'XS', image: '/images/product4.jpg' },
+        { id: 5, name: 'Product 5', price: 250, size: 'S', image: '/images/product5.jpg' },
+        { id: 6, name: 'Product 6', price: 350, size: 'M', image: '/images/product6.jpg' },
+    ]);
+    const [filterSize, setFilterSize] = useState('');
 
-    const filteredProducts = selectedSize
-        ? products.filter(p => p.size === selectedSize)
+    const filteredProducts = filterSize
+        ? products.filter(product => product.size === filterSize)
         : products;
 
     return (
-        <div className="container">
-            <h2>Catalog</h2>
+        <div>
+            <h1>Catalog</h1>
             <div>
-                <label>Filter by Size: </label>
-                {['XS', 'S', 'M', 'L'].map(size => (
-                    <button
-                        key={size}
-                        onClick={() => setSelectedSize(size)}
-                        className={selectedSize === size ? 'active' : ''}
-                    >
-                        {size}
-                    </button>
-                ))}
-                <button onClick={() => setSelectedSize('')}>All</button>
+                <label>Filter by Size:</label>
+                <select onChange={(e) => setFilterSize(e.target.value)}>
+                    <option value="">All</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
             </div>
-            <div className="product-grid">
+            <div className="product-list">
                 {filteredProducts.map(product => (
                     <ProductCard key={product.id} product={product} />
                 ))}
