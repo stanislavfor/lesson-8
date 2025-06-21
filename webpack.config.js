@@ -1,19 +1,21 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.js",
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
-        publicPath: "/",
-        clean: true,
+        publicPath: "/", // для корректных путей при SPA
+        clean: true, // очищает dist перед каждой сборкой
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, "public"),
+            directory: path.join(__dirname, "public"), // или dist, если нет public
         },
-        historyApiFallback: true,
+        historyApiFallback: true, // для React Router
         port: 3001,
+        open: true,
     },
     module: {
         rules: [
@@ -27,7 +29,7 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/i,
+                test: /\.(ico|png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
             },
             {
@@ -40,6 +42,12 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".jsx"], // если требуется импорт без расширений
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+            favicon: "./src/assets/favicon.ico",
+        }),
+    ],
 };
