@@ -6,12 +6,12 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
-        publicPath: "/", // для корректных путей при SPA
-        clean: true, // очищает dist перед каждой сборкой
+        publicPath: "/", // для коррекции путей для SPA
+        clean: true, // очистка dist перед каждой сборкой
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, "public"), // или dist, если нет public
+            directory: path.join(__dirname, "public"), // dist или public
         },
         historyApiFallback: true, // для React Router
         port: 3001,

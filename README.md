@@ -120,6 +120,7 @@ npm start
         ```
         taskkill /PID <PID> /F
         ```
+        , например: 'taskkill /PID 10820 /F'
         , где заменить <PID> на фактический идентификатор процесса.
 
 - Для macOS/Linux:

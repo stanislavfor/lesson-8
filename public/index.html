@@ -1,12 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Brand Shop</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/menu.css">
 <!--    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-<div id="root"></div>
+<!--  <div id="root"></div>-->
+    <div class="brand-container">
+        <div class="section-container">
+            <div class="header">
+                <div class="header__logo">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="search">
+                        <a href=""><img src="img/search.png" alt="search-icon"></a>
+                    </div>
+                </div>
+                <div class="header__menu-bar">
+                    <div class="menu">
+                        <a href=""><img src="img/menu-bar.svg" alt="menu-bar"></a>
+                        <div class="dropdown-menu">
+                            <h3>MEN</h3>
+                            <ul>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Denim</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                            </ul>
+                            <h3>WOMAN</h3>
+                            <ul>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Jackets & Coats</a></li>
+                                <li><a href="#">Polos</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Shirts</a></li>
+                            </ul>
+                            <h3>KIDS</h3>
+                            <ul>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Jackets & Coats</a></li>
+                                <li><a href="#">Polos</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Bags</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <a href=""><img src="img/account.svg" alt="account-icon"></a>
+                    </div>
+                    <div class="cart">
+                        <a href=""><img src="img/cart.svg" alt="cart-icon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-container">
+            <div class="top">
+                <div class="top__link">
+                    <a href="index.html">
+                        <div class="top__title">
+                            <h2>THE BRAND</h2>
+                            <h4>OF LUXERIOUS <span>FASHION</span></h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-images-wrapper">
+            <div class="top-images">
+                <div class="top-images-for-women top-images-box">
+                    <a href=""><img class="image1-title" src="img/top-images/top-1.png" alt="image1-title"></a>
+                </div>
+                <div class="top-images-for-men top-images-box">
+                    <a href=""><img class="image2-title" src="img/top-images/top-2.png" alt="image2-title"></a>
+                </div>
+                <div class="top-images-for-kids top-images-box">
+                    <a href=""><img class="image3-title" src="img/top-images/top-3.png" alt="image3-title"></a>
+                </div>
+            </div>
+            <div class="top-images-2">
+                <div class="top-images-assesories top-images-box">
+                    <a href=""><img class="image4-title" src="img/top-images/top-4.png" alt="image4-title"></a>
+                </div>
+            </div>
+        </div>
+
+        <section class="top-items" id="top-items">
+            <div class="top-items-title">
+                <h2>Featured Items</h2>
+                <p>Shop for items based on what we featured in this week</p>
+            </div>
+            <div class="top-items-wrapper">
+                <div class="top-item" id="#top-item1">
+                    <a href="#top-items"><img src="img/top-items/1.jpg" alt="item1"></a>
+                    <div class="top-item__text">
+                        <h4>ELLERY X M'O CAPSULE</h4>
+                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <div class="top-item__price">$52.00</div>
+                    </div>
+                </div>
+                <div class="top-item" id="#top-item2">
+                    <a href="#top-item1"><img src="img/top-items/2.jpg" alt="item2"></a>
+                    <div class="top-item__text">
+                        <h4>ELLERY X M'O CAPSULE</h4>
+                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <div class="top-item__price">$52.00</div>
+                    </div>
+                </div>
+                <div class="top-item" id="#top-item3">
+                    <a href="#top-item1"><img src="img/top-items/3.jpg" alt="item3"></a>
+                    <div class="top-item__text">
+                        <h4>ELLERY X M'O CAPSULE</h4>
+                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <div class="top-item__price">$52.00</div>
+                    </div>
+                </div>
+                <div class="top-item" id="#top-item4">
+                    <a href="#top-items"><img src="img/top-items/4.jpg" alt="item4"></a>
+                    <div class="top-item__text">
+                        <h4>ELLERY X M'O CAPSULE</h4>
+                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <div class="top-item__price">$52.00</div>
+                    </div>
+                </div>
+                <div class="top-item" id="#top-item5">
+                    <a href="#top-item4"><img src="img/top-items/5.jpg" alt="item5"></a>
+                    <div class="top-item__text">
+                        <h4>ELLERY X M'O CAPSULE</h4>
+                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <div class="top-item__price">$52.00</div>
+                    </div>
+                </div>
+                <div class="top-item" id="#top-item6">
+                    <a href="#top-item4"><img src="img/top-items/6.jpg" alt="item6"></a>
+                    <div class="top-item__text">
+                        <h4>ELLERY X M'O CAPSULE</h4>
+                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <div class="top-item__price">$52.00</div>
+                    </div>
+                </div>
+                <div class="top-item" id="#top-item7">
+                    <a href="#top-items"><img src="img/top-items/7.jpg" alt="item7"></a>
+                    <div class="top-item__text">
+                        <h4>ELLERY X M'O CAPSULE</h4>
+                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <div class="top-item__price">$52.00</div>
+                    </div>
+                </div>
+                <div class="top-item" id="#top-item8">
+                    <a href="#top-item7"><img src="img/top-items/8.jpg" alt="item8"></a>
+                    <div class="top-item__text">
+                        <h4>ELLERY X M'O CAPSULE</h4>
+                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <div class="top-item__price">$52.00</div>
+                    </div>
+                </div>
+                <div class="top-item" id="#top-item9">
+                    <a href="#top-item7"><img src="img/top-items/9.jpg" alt="item9"></a>
+                    <div class="top-item__text">
+                        <h4>ELLERY X M'O CAPSULE</h4>
+                        <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <div class="top-item__price">$52.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="next-button"> <a href="#top-items">Browse All Product</a> </div>
+        </section>
+
+        <div class="feature">
+            <div class="feature__part">
+                <div class="feature__icon"><img src="img/feature-icon-1.svg" alt="feature-icon"></div>
+                <div class="feature__title">Free Delivery</div>
+                <div class="feature__description">
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                </div>
+            </div>
+            <div class="feature__part">
+                <div class="feature__icon"><img src="img/feature-icon-2.svg" alt="feature-icon"></div>
+                <div class="feature__title">Sales & discounts</div>
+                <div class="feature__description">
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                </div>
+            </div>
+            <div class="feature__part">
+                <div class="feature__icon"><img src="img/feature-icon-3.svg" alt="feature-icon"></div>
+                <div class="feature__title">Quality assurance</div>
+                <div class="feature__description">
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subscribe">
+            <div class="subscribe-part"> <img class="subscribe__icon" src="img/subscribe-icon.png" alt="subscribe-icon">
+                <p class="subscribe__description">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+            </div>
+            <form class="subscribe-form">
+                <div class="subscribe-form__title">SUBSCRIBE</div>
+                <div class="subscribe-form__description">SUBSCRIBE FOR OUR NEWLETTER AND PROMOTION</div>
+                <div class="subscribe-form__input">
+                    <div class="input-field">
+                        <label>
+                            <input type="email" placeholder="Enter Your Email"> </label>
+                    </div>
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="copyrigth" id="copyrigth">
+                <p>© 2025 Brand All Rights Reserved.</p>
+            </div>
+            <div class="social">
+                <a href="#copyrigth"><div class="social-icon1"></div></a>
+                <a href="#copyrigth"><div class="social-icon2"></div></a>
+                <a href="#copyrigth"><div class="social-icon3"></div></a>
+                <a href="#copyrigth"><div class="social-icon4"></div></a>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
